@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'sub_systems/laneline_detection'
+
+  get 'sub_systems/steering_control'
+
+  get 'sub_systems/traffic_sign_recognition'
+
+  get 'sub_systems/vehicle_detection'
+
 	root 'static_pages#home'
 
 	get		'/help',		to: 'static_pages#help'
