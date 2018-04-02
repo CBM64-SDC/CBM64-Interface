@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'sub_systems/laneline_detection'
+  #get 'sub_systems/laneline_detection'
 
   get 'sub_systems/steering_control'
 
@@ -17,6 +17,11 @@ Rails.application.routes.draw do
 	get		'/login',		to: 'sessions#new'
 	post	'/login',		to: 'sessions#create'
 	delete	'/logout',		to: 'sessions#destroy'
+
+	get		'/laneline',	to: 'sub_systems#laneline_detection'
+
+	get 	'/detect_laneline', 		to: 'sub_systems#detect_laneline'
+
 
 	resources :users
 	resources :account_activations, only: [:edit]
